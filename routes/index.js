@@ -68,15 +68,15 @@ router.post('/forgot', function (req, res) {
               const tp = nm.createTransport({
                 service: "gmail",
                 auth: {
-                  user: "mishramanisha925@gmail.com",
-                  pass: "1472580369"
+                  user: "raajk0338@gmail.com",
+                  pass: "raajkumar8475949605"
                 }
               });
   
               const mailOptions = {
-                from: "Harsh<harshu854@gmail.com>",
+                from: "letsKnowService<letsknow854@gmail.com>",
                 to: req.body.email,
-                subject: "Testing the nodemailer",
+                subject: "Reset password Link",
                 text: "reset link : http://" + req.headers.host + "/reset/" + resetToken + '\n\n' + " ignor this mail if not sent by you."
               }
   
