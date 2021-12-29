@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const plm = require('passport-local-mongoose');
 
 // mongoose.connect('mongodb://localhost/gfaadbook');
+// 'mongodb+srv://jkthecoder:jkTheCoder@cluster0.va5hj.mongodb.net/chatapp?retryWrites=true&w=majority'
 mongoose.connect('mongodb+srv://jkthecoder:jkTheCoder@cluster0.va5hj.mongodb.net/chatapp?retryWrites=true&w=majority', {
   useNewUrlParser:true,
   useFindAndModify:false,

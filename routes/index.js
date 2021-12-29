@@ -83,7 +83,7 @@ router.post('/forgot', function (req, res) {
               tp.sendMail(mailOptions, function (err) {
                 if (err) throw err;
                 else {
-                  res.send('mail sent')
+                  alert('Reset Link Has been sent, Please Check your Mail..!');
                 }
               })
             }) 
@@ -245,7 +245,11 @@ router.get('/logout', function (req, res) {
 });
 
 router.get('/login', sendToProfile, function (req, res) {
-  res.render('login', { loggedin: false });
+  userModel.findOne({username:req.body.username})
+  .then(user => {
+    if(!user) res.render('login', { loggedin: false, lme: 'IncorrectDeatials..!' });
+  })
+ 
 });
 
 // =====================
@@ -295,7 +299,7 @@ router.post('/register', function (req, res) {
 
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/profile',
-  failureRedirect: '/login'
+  failureRedirect:'/login'
 }), function (req, res) { });
 
 
