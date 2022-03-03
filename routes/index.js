@@ -49,7 +49,7 @@ router.get('/reset/:token', function (req, res) {
         res.render('newPasswordPage', { loggedin: false, token: req.params.token });
       }
       else {
-        res.send('bhagao maakde ko !');
+        res.send('Cant Reset Its non-authenticated !');
       }
     })
 })
@@ -287,7 +287,7 @@ router.post('/register', function (req, res) {
   var detailsWithoutPassword = new userModel({
     email: req.body.email,
     username: req.body.username,
-    name: req.body.username
+    name: luckyName
   });
   userModel.register(detailsWithoutPassword, req.body.password)
     .then(function () {

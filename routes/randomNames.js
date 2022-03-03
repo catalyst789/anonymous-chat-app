@@ -1,3 +1,3 @@
-var names = ['lillyelephant', 'perpendicular', 'tangent', 'rattacky', 'horizontal', 'fackar007', 'hacker', 'voltage', 'Gendew'];
+var names = ['lillyelephant', 'perpendicular', 'tangent', 'Tomato', 'horizontal', 'Badman', 'hacker', 'voltage', 'Cauliflower'];
 
 module.exports = names;
